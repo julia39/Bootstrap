@@ -1,12 +1,14 @@
 var express = require('express');
 var path = require('path');
-var favicon = require('serve-favicon');
+//var favicon = require('serve-favicon');
 var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
+//var ejs=require('ejs');
+var http=require('http');
+var service=http.createServer(app);
 
-var ejs=require('ejs');
-var server = require('http').createServer(app);
+//var ejs=require('ejs');
 
 var routes = require('./routes/index');
 var users = require('./routes/users');
@@ -15,6 +17,8 @@ var app = express();
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
+//app.set('.html',ejs.__express);
+//app.set('view engine','html');
 app.set('view engine', 'ejs');
 
 //app.engine('.html',ejs.__express);
@@ -71,6 +75,15 @@ app.use(function(err, req, res, next) {
 
 
 server.listen(app.get('port'),function(){
+    console.log('Express server listening on port'+app.get('port'));
+});
+
+// angular启动页
+//app.get('/', function (req, res) {
+//    res.sendfile('app/index.html');
+//});
+
+service.listen(app.get('port'),function(req,res){
     console.log('Express server listening on port'+app.get('port'));
 });
 
