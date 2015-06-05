@@ -21,7 +21,7 @@ sampleApp.config(['$routeProvider',
         controller: 'ShowOrdersController'
       }).
       when('/ShowOrder/:orderId', {
-        templateUrl: '../../views/angularDemo/templates/show_details.html',
+        templateUrl: '/show_details.html',//../../views/angularDemo/templates
         controller: 'ShowDetailsController'
       }). 
        when('/Calculator', {

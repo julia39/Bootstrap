@@ -5,6 +5,9 @@ var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 
+var ejs=require('ejs');
+var server = require('http').createServer(app);
+
 var routes = require('./routes/index');
 var users = require('./routes/users');
 
@@ -13,6 +16,10 @@ var app = express();
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs');
+
+//app.engine('.html',ejs.__express);
+//app.set('view engine','html');//替换文件扩展名ejs为html
+
 
 // uncomment after placing your favicon in /public
 //app.use(favicon(__dirname + '/public/favicon.ico'));
@@ -57,5 +64,14 @@ app.use(function(err, req, res, next) {
   });
 });
 
+// angular启动页
+//app.get('/', function (req, res) {
+//    res.sendfile('app/index.html');
+//});
+
+
+server.listen(app.get('port'),function(){
+    console.log('Express server listening on port'+app.get('port'));
+});
 
 module.exports = app;
