@@ -4,25 +4,66 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
     <title>Bootstrap登录</title>
+    <link rel="stylesheet" type="text/css"
+          href="../../../public/stylesheets/css/font-awesome/metro-font-awesome.min.css">
     <link rel="stylesheet" type="text/css" href="../../../public/stylesheets/css/font-awesome/font-awesome.css">
     <link rel="stylesheet" type="text/css" href="../../../public/stylesheets/css/bootstrap/3.3.4/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css"
+          href="../../../public/stylesheets/css/bootstrap/3.3.4/bootstrap-responsive.min.css">
+    <link rel="stylesheet" type="text/css" href="../../../public/stylesheets/css/metro/style-metro.css">
     <link rel="stylesheet/less" type="text/css" href="../../../public/stylesheets/less/testDemo/login.less">
+    <link rel="stylesheet/less" type="text/css" href="../../../public/stylesheets/less/common/common.less">
     <script type="text/javascript" src="../../../public/javascripts/3rd-lib/less/less.min.js"></script>
     <script type="text/javascript" src="../../../public/javascripts/3rd-lib/seajs/dist/sea.js"></script>
 </head>
 <body class="login">
-<div class="log"><img src="../../../public/images/logo-big.png"/> </div>
+<div class="log"><img src="../../../public/images/logo-big.png"/></div>
 <div class="content">
-   <form class="form-horizontal login-form">
-       <h3 class="form-title">登录页面</h3>
-       <div class="form-group">
-           <label for="name" class="form-control hide">姓名</label>
-           <div class="control">
-               <i class="icon glyphicon-user"></i>
-               <input type="text" name="name" class="input-row" placeholder="请输入账号">
-           </div>
-       </div>
-   </form>
+    <form class="form-horizontal login-form">
+        <h3 class="form-title">登录页面</h3>
+
+        <div class="alert alert-error">
+            <button type="button" class="close hide" data-dismiss="alert"></button>
+            <span>请输入你的账号和密码</span>
+        </div>
+        <div class="control-group">
+            <label class="form-control hide">账号</label>
+
+            <div class="control">
+                <div class="input-icon left">
+                    <i class="icon icon-user"></i>
+                    <input type="text" name="name" class="form-control input-row" placeholder="请输入邮箱或用户名">
+                </div>
+            </div>
+        </div>
+        <div class="control-group">
+            <label class="control-label hide">密码：</label>
+
+            <div class="control">
+                <div class="input-icon left">
+                    <i class="icon icon-lock"></i>
+                    <input type="password" name="password" class="form-control input-row" placeholder="请输入密码">
+                </div>
+            </div>
+        </div>
+
+        <div class="form-button">
+            <label class="checkbox">
+                <div class="check">
+                         <span class="checkinputbox">
+                             <input type="checkbox" value="1" name="记住密码">
+                             <label></label>
+                         </span>
+                    记住密码
+                </div>
+            </label>
+            <button type="submit" class="btn green login-btn pull-right" value="确认">确认</button>
+        </div>
+        <div class="form-box">
+            <a class="pull-left" href="#">忘记密码</a>
+            <a class="pull-right" href="#">注册</a>
+        </div>
+    </form>
 </div>
 
 <script type="text/javascript">

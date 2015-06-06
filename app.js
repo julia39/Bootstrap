@@ -74,9 +74,9 @@ app.use(function(err, req, res, next) {
 //});
 
 
-server.listen(app.get('port'),function(){
-    console.log('Express server listening on port'+app.get('port'));
-});
+//server.listen(app.get('port'),function(){
+//    console.log('Express server listening on port'+app.get('port'));
+//});
 
 // angular启动页
 //app.get('/', function (req, res) {

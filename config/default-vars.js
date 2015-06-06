@@ -16,7 +16,8 @@ define(function(require,exports,module){
         alias:{
             "jquery":"jquery/dist/jquery",
             "angular":"angular/angular",
-            "less":"less/less.min"
+            "less":"less/less.min",
+            "jquery-validate":"jquery-plugins/jquery-validate/1.13.1/jquery.validate"
         }
     });
 });
