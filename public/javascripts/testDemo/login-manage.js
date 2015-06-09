@@ -5,7 +5,7 @@
 
 define(function(require,exports,module){
     require("jquery");
-    require("angular")
+    require("angular");
     require("less");
 
 

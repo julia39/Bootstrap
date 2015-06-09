@@ -15,7 +15,9 @@ define(function(require,exports,module){
         //别名配置
         alias:{
             "jquery":"jquery/dist/jquery",
-            "angular":"angular/angular",
+            "angular":"angular-js/1.2.5/angular-route",
+            "angularResource":"angular-resource/angular-resource",
+            "angularRoute":"angular-js/1.2.5/angular-route",
             "less":"less/less.min",
             "jquery-validate":"jquery-plugins/jquery-validate/1.13.1/jquery.validate"
         }
