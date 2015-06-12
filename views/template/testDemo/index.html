@@ -16,6 +16,7 @@
 </head>
 <body>
 <!--头部-->
+<div ng-include="'common/header.html'"></div>
 <!--头部end-->
 
 <!--内容-->
@@ -29,8 +30,7 @@
 <!--内容end-->
 
 <!--底部-->
-<div ng-view=""></div>
-<!--<div ng-include="'../common/footer.html'"></div>-->
+<div ng-include="'common/footer.html'"></div>
 <!--底部end-->
 <script type="text/javascript">
     seajs.use('../../../config/default-vars');
