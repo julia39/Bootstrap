@@ -8,6 +8,16 @@
     padding-right:20px;
     margin:0px;
   }
+  .brand{
+    float:left;
+    display: inline-block;
+    padding:10px 0px;
+    margin-left:-20px;
+    width:225px;
+    img{
+      margin-left:20px;
+    }
+  }
 }
 
 .navbar{
@@ -29,6 +39,12 @@
         position: relative;
         padding:15px 10px 7px 10px;
         margin:0px;
+        img{
+          display: inline;
+          width:29px;
+          height: 29px;
+          vertical-align: middle;
+        }
         i{
           font-size: 18px;
           color:#8a8a8a;
@@ -43,7 +59,123 @@
           border-radius: 50% !important;
 
         }
+        &:hover{
+          background: #383838;
+        }
       }
+
+      &.open{
+        .dropdown-toggle{
+          background: #383838;
+        }
+      }
+
+      &.open>.dropdown-menu{
+        display:block;
+      }
+      &.user .dropdown-toggle{
+        padding:7px 0px 7px 10px;
+        color:#ddd;
+        font-size:13px;
+        i{
+          display: inline-block;
+          font-size: 16px;
+        }
+      }
+    }
+  }
+}
+
+//子菜单
+.dropdown-menu{
+  min-width: 160px;
+  max-width: 300px;
+  width:240px;
+  margin-top:3px;
+  background: #fff;
+  &:before{
+    position:absolute;
+    top: -8px;
+    left: 25px;
+    border-bottom: 7px solid #ccc;
+    border-right: 7px solid transparent;
+    border-left: 7px solid transparent;
+    content: '';
+    z-index: 1;
+  }
+  &.pull-right:before{
+    position:absolute;
+    top: -8px;
+    left:auto;
+    right: 25px;
+  }
+  &.extend{
+    position:absolute;
+    top:100%;
+    left:auto;
+    right:0px;
+    width:233px;
+    border:1px solid #ddd;
+  }
+  li{
+    display: block;
+    width: 100%;
+    line-height: 20px;
+    padding:0px;
+    box-sizing: border-box;
+    a{
+      padding:10px;
+    }
+    p{
+      display: block;
+      padding: 10px;
+      margin:0px;
+      background-color: #eee;
+      font-size:14px;
+      font-weight: 300;
+      color:#000;
+    }
+    .label{
+      padding: 2px 2px 2px 3px;
+      margin-right: 3px;
+    }
+    .photo{
+      display: inline;
+      padding:0px;
+      margin:0px;
+      img{
+        display: block;
+        float:left;
+        width:40px;
+        height:40px;
+        margin-right: 5px;
+        vertical-align:middle;
+      }
+    }
+    .subject{
+      display: block;
+      line-height: 20px;
+      .from{
+        max-width:80px;
+        line-height: 20px;
+        font-size:14px;
+        font-weight: 400;
+        color:#02689b;
+      }
+      .time{
+        max-width: 30px;
+        float:right;
+        line-height: 20px;
+      }
+    }
+    .message{
+      display: block;
+      width: 213px;
+      height:40px;
+      line-height: 20px;
+      margin:0px;
+      white-space:normal;
+      word-break: break-all;
     }
   }
 }

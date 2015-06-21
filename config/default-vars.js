@@ -19,7 +19,8 @@ define(function(require,exports,module){
             "angularResource":"angular-resource/angular-resource",
             "angularRoute":"angular-js/1.2.5/angular-route",
             "less":"less/less.min",
-            "jquery-validate":"jquery-plugins/jquery-validate/1.13.1/jquery.validate"
+            "jquery-validate":"jquery-plugins/jquery-validate/1.13.1/jquery.validate",
+            "eventEmitter":"../common-util/event-emitter"
         }
     });
 });

@@ -2,7 +2,7 @@
     <div class="navbar-inner">
         <div class="container-fluid">
             <!--logo-->
-            <a class="navbar-brand" href="index.html"></a>
+            <a class="brand" href="index.html"><img src="../../../public/images/logo.png" alt="logo"></a>
             <!--logo end-->
             <!--导航-->
             <a class="btn-group collapsing" data-toggle="collapse" data-target=".nav-collapse">
@@ -10,6 +10,7 @@
             <!--导航end-->
             <!---->
             <ul class="nav pull-right">
+                <!--通知-->
                 <li class="dropdown" id="header-notification-bar">
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown">
                         <i class="icon-warning"></i>
@@ -19,14 +20,24 @@
                         <li>
                             <p>你有14个新消息</p>
                         </li>
+                        <li>
+                            <a href="#">
+                                <span class="label label-green">
+                                    <i class="icon-plus"></i>
+                                </span>
+                                有新的用户注册，<strong class="time">刚刚</strong>
+                            </a>
+                        </li>
                     </ul>
                 </li>
+                <!--通知 end-->
+                <!--任务-->
                 <li class="dropdown" id="header-inbox-bar">
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown">
                         <i class="icon-envelop"></i>
                         <span class="badge">5</span>
                     </a>
-                    <ul class="dropdown-menu">
+                    <ul class="dropdown-menu pull-right">
                         <li>
                             <p>你有12个新的消息</p>
                         </li>
@@ -36,7 +47,7 @@
                                 <img src="../../../public/images/avatar2.jpg">
                             </span>
                             <span class="subject">
-                                <span class="form">韩梅梅</span>
+                                <span class="from">韩梅梅</span>
                                 <span class="time">刚刚</span>
                             </span>
                             <span class="message">
@@ -46,18 +57,52 @@
                         </li>
                     </ul>
                 </li>
+                <!--任务end-->
+                <!--邮箱通知-->
                 <li class="dropdown">
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-
+                        <i class="icon-envelop"></i>
+                        <span class="badge">5</span>
                     </a>
-                    <ul class="dropdown-menu">
+                    <ul class="dropdown-menu pull-right">
                         <li>
-
+                            <p>你有12个新的消息</p>
+                        </li>
+                        <li>
+                            <a href="#">
+                            <span class="photo">
+                                <img src="../../../public/images/avatar2.jpg">
+                            </span>
+                            <span class="subject">
+                                <span class="from">韩梅梅</span>
+                                <span class="time">刚刚</span>
+                            </span>
+                            <span class="message">
+                                Vivamus sed auctor nibh congue nibh.auctor nibh . Vivamus sed auctor nibh congue nibh.auctor nibh .
+                            </span>
+                            </a>
                         </li>
                     </ul>
                 </li>
-                <li class="dropdown"></li>
-                <li class="dropdown"></li>
+                <!--邮箱通知end-->
+
+                <!--用户-->
+                <li class="dropdown user">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                        <img alt="" src="../../../public/images/avatar1_small.jpg">
+                        <span class="username">Bob Nilson</span>
+                        <i class="icon-angle-up"></i>
+                    </a>
+                    <ul class="dropdown-menu pull-right">
+                        <li>
+                            <a class="#">
+                                <i class="icon-user"></i>
+                                My Profile
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+                <!--用户end-->
             </ul>
         </div>
     </div>

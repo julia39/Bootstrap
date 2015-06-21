@@ -3,12 +3,13 @@
  */
 
 define(function(require,exports,module){
-    require("jquery");
-    require("angular");
-    require("angularRoute");
-    require("less");
+//    require("jquery");
+//    require("angular");
+//    require("angularRoute");
+//    require("less");
 
-    var indexRoute=require("../testDemo/index-route");
 
+    //var indexRoute=require("../testDemo/index-route");
+    require('../testDemo/header');
 
 });
