@@ -18,6 +18,10 @@
       margin-left:20px;
     }
   }
+  .btn-navbar{
+    background: #212121 !important;
+    color:#fff;
+  }
 }
 
 .navbar{
@@ -88,15 +92,13 @@
 
 //子菜单
 .dropdown-menu{
-  min-width: 160px;
-  max-width: 300px;
-  width:240px;
+  width:auto;
   margin-top:3px;
   background: #fff;
   &:before{
     position:absolute;
     top: -8px;
-    left: 25px;
+    right: 22px;
     border-bottom: 7px solid #ccc;
     border-right: 7px solid transparent;
     border-left: 7px solid transparent;
@@ -109,11 +111,13 @@
     left:auto;
     right: 25px;
   }
-  &.extend{
+  &.extended{
     position:absolute;
     top:100%;
     left:auto;
     right:0px;
+    min-width: 160px;
+    max-width: 300px;
     width:233px;
     border:1px solid #ddd;
   }
@@ -121,7 +125,7 @@
     display: block;
     width: 100%;
     line-height: 20px;
-    padding:0px;
+    padding: 0px !important;
     box-sizing: border-box;
     a{
       padding:10px;

@@ -6,7 +6,8 @@
     <title>首页</title>
     <link rel="stylesheet" type="text/css" href="../../../public/stylesheets/css/font-awesome/font-awesome.css">
     <link rel="stylesheet" type="text/css" href="../../../public/stylesheets/css/bootstrap/3.3.4/bootstrap.min.css">
-    <link rel="stylesheet" type="text/css" href="../../../public/stylesheets/css/bootstrap/3.3.4/bootstrap-responsive.min.css">
+    <link rel="stylesheet" type="text/css"
+          href="../../../public/stylesheets/css/bootstrap/3.3.4/bootstrap-responsive.min.css">
     <link rel="stylesheet" type="text/css" href="../../../public/stylesheets/css/metro/style-metro.css">
     <link rel="stylesheet/less" type="text/css" href="../../../public/stylesheets/less/index-manage.less">
     <script type="text/javascript" src="../../../public/javascripts/3rd-lib/less/less.min.js"></script>
@@ -19,13 +20,17 @@
 <!--头部end-->
 
 <!--内容-->
+<div class="page-container">
+    <!--左边导航-->
+    <div ng-include="'common/left-nav.html'"></div>
+    <!--左边导航end-->
 
-<!--左边导航-->
-<!--左边导航end-->
+    <!--主内容-->
+    <div class="page-content">
 
-<!--主内容-->
-<!--主内容end-->
-
+    </div>
+    <!--主内容end-->
+</div>
 <!--内容end-->
 
 <!--底部-->
@@ -39,7 +44,7 @@
     //    seajs.use('../../../public/javascripts/3rd-lib/angular-js/1.2.5/angular-resource');
     //    seajs.use('../../../public/javascripts/3rd-lib/angular-js/1.2.5/angular-mocks');
     //    seajs.use('../../../public/javascripts/3rd-lib/ng-grid/ng-grid-2.0.14.min');
-        seajs.use('../../../public/javascripts/testDemo/index-manage');
+    seajs.use('../../../public/javascripts/testDemo/index-manage');
     //    seajs.use('../../../public/javascripts/testDemo/index-route');
 </script>
 <script src="../../../public/javascripts/3rd-lib/jquery/dist/jquery.js" type="text/javascript"></script>
