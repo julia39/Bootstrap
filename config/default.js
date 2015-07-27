@@ -30,6 +30,12 @@ module.export=extend(true,{
         },
         "vars":{
             "bootstrap-js-dir":"boostrap-js"
+        },
+        "system":{
+            "port": 8080,
+            "env": "development",
+            "env-prod": "production",
+            "env-dev": "development"
         }
     }
 },defaultVars);

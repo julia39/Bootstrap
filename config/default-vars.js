@@ -4,9 +4,12 @@
  */
 
 
-//module.exports={
-//
-//};
+module.exports={
+    "system":{
+        "baseRestUrl": "http://antfact.com/eagleyes/v3",
+        "env": "production"
+    }
+};
 
 define(function(require,exports,module){
     seajs.config({

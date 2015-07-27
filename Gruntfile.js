@@ -8,21 +8,14 @@ module.exports = function(grunt) {
     grunt.initConfig({
         pkg: grunt.file.readJSON('package.json'),
         uglify: {
-            //options: {
-            //    banner: '/*! <%= pkg.name %> <%= grunt.template.today("yyyy-mm-dd") %> */\n'
-            //},
-            //build: {
-            //    src: 'src/<%= pkg.name %>.js',
-            //    dest: 'build/<%= pkg.name %>.min.js'
-            //}
-            my_target:{
-                files:[{
-                    expand:true,
-                    cwd:'src',
-                    src:'**/*.js',
-                    dest:'dest'
-                }]
+            options: {
+                banner: '/*! <%= pkg.name %> <%= grunt.template.today("yyyy-mm-dd") %> */\n'
+            },
+            build: {
+                src: 'src/<%= pkg.name %>.js',
+                dest: 'build/<%= pkg.name %>.min.js'
             }
+
         },
         concat:{//合并js
             options:{
@@ -32,7 +25,7 @@ module.exports = function(grunt) {
             },
             dist:{
               src:['src/*.js'],
-                dest:'build/built.js'
+                dest:'build/<%= pkg.name %>.cat.js'
             },
             mobileLess:{
 
@@ -173,6 +166,7 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-html-build');
 
     grunt.loadNpmTasks('grunt-contrib-jshint');
+    grunt.loadNpmTasks('grunt-contrib-qunit');
 
     // 默认被执行的任务列表。
     grunt.registerTask('default', ['uglify','watch','jshint']);
