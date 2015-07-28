@@ -44,6 +44,16 @@ module.exports = function(grunt) {
                     ext:'.css'
                 }]
             },
+            sass: {
+                dist: {
+                    files: {
+                        '<%= meta.deployPath %>style.css': '<%= meta.srcPath %>style.scss'
+                    },
+                    options: {
+                        sourcemap: 'true'
+                    }
+                }
+            },
             production:{
                 options:{
                     compress:true,
@@ -63,10 +73,10 @@ module.exports = function(grunt) {
             },
             scripts:{
                 files:[
-                    './public/stylesheets/less/**/*.less',
-                    './public/stylesheets/less/*.less'
+                    './public/stylesheets/scss/**/*.scss',
+                    './public/stylesheets/scss/*.scss'
                 ],
-                tasks:['less'],
+                tasks:['sass'],
                 options:{
                     spawn:false,
                 },
@@ -103,6 +113,7 @@ module.exports = function(grunt) {
             }
         },
         jshint:{//校验js
+            all: ['Gruntfile.js', 'lib/**/*.js', 'public/**/*.js'],
             options:{
                 //大括号包裹
                 curly:true,
@@ -161,7 +172,8 @@ module.exports = function(grunt) {
     //grunt.loadNpmTasks('grunt-contrib-uglify');
 
     grunt.loadNpmTasks('grunt-contrib-concat');
-    grunt.loadNpmTasks('grunt-contrib-less');
+    //grunt.loadNpmTasks('grunt-contrib-less');
+    grunt.loadNpmTasks('grunt-contrib-sass');
     grunt.loadNpmTasks('grunt-contrib-watch');
     grunt.loadNpmTasks('grunt-html-build');
 
@@ -169,7 +181,7 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-contrib-qunit');
 
     // 默认被执行的任务列表。
-    grunt.registerTask('default', ['uglify','watch','jshint']);
+    grunt.registerTask('default', ['uglify','watch','jshint',sass]);
     //grunt.registerTask('default', ['uglify']);
 
 };

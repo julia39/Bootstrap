@@ -18,6 +18,6 @@ $(document).ready(function () {
         mode: 'fade',
         auto: true,
         autoControls: true,
-    })
+    });
 
 });
